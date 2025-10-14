@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdulrahman Zidan — Real Estate Agent | ZidMatrix</title>
+
+  <meta name="description" content="Abdulrahman Zidan (ZidMatrix) — Top Real Estate Achiever. Professional real-estate agent with strong sales, negotiation and client-relationship skills." />
+  <meta name="keywords" content="Real Estate, Real Estate Agent, Property Sales, Abdulrahman Zidan, ZidMatrix, Top Achiever" />
+  <meta name="author" content="Abdulrahman Zidan" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      background-color: #fff;
+      margin: 0;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: black;
+      margin-bottom: 2rem;
+    }
+
+    .accent { color: gold; }
+
+    /* hero */
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .hero-photo img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid gold;
+      box-shadow: 0 0 25px rgba(255,215,0,0.3);
+    }
+
+    .hero-buttons { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-gold {
+      background-color: gold;
+      color: black;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-gold:hover { background-color: #e6b800; }
+
+    /* About */
+    .about-text {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    /* Experience */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .exp-item {
+      background: #fdfdfd;
+      border-left: 4px solid gold;
+      padding: 1.2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    .exp-item h3 { margin: 0; color: black; }
+    .exp-item p { margin: 0.5rem 0 0; color: #555; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skill {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .skill:hover { background: gold; color: black; }
+
+    /* Contact */
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #fdfdfd;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    #contactForm input, #contactForm textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    #contactForm input:focus, #contactForm textarea:focus {
+      border-color: gold;
+      box-shadow: 0 0 6px rgba(255,215,0,0.3);
+      outline: none;
+    }
+
+    #sendBtn {
+      background: black;
+      color: gold;
+      font-weight: 600;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #sendBtn:hover { background: gold; color: black; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: gold;
+      font-size: 0.9rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: gold; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <div class="brand">
+        <div class="logo">ZidMatrix</div>
+        <div class="subtitle">Abdulrahman Zidan — Real Estate Agent</div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero section">
+    <div class="container hero-content" data-aos="fade-up">
+      <div class="hero-text">
+        <h1 class="name">Abdulrahman <span class="accent">Zidan</span></h1>
+        <p class="role">Top Real Estate Achiever — Property Sales & Client Relations</p>
+        <p>Experienced real estate agent with a record of exceeding sales targets, building trust, and closing high-value deals.</p>
+        <div class="hero-buttons">
+          <a href="assets/AbdulrahmanZidanResume.pdf" class="btn-gold" target="_blank">Download CV</a>
+          <a href="https://www.linkedin.com/in/abdulrahmanzidan/" class="btn-gold" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/profile.jpg" alt="Abdulrahman Zidan">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="about-text">
+        I'm <strong>Abdulrahman Zidan</strong>, a passionate real estate agent known for integrity, dedication, and delivering results.  
+        With a deep understanding of market trends and client needs, I help individuals and families find their ideal homes and investments.  
+        Recognized among the <span class="accent">Top Achievers</span> in my field, I take pride in building long-term relationships based on trust and transparency.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Experience</h2>
+      <div class="experience-list">
+        <div class="exp-item">
+          <h3>Real Estate Agent — ZidMatrix</h3>
+          <p>Negotiated and closed multiple high-value property deals across residential and commercial sectors.</p>
+        </div>
+        <div class="exp-item">
+          <h3>Sales & Client Relations</h3>
+          <p>Maintained exceptional customer satisfaction and repeat business through transparent communication and tailored services.</p>
+        </div>
+        <div class="exp-item">
+          <h3>Top Achiever Recognition</h3>
+          <p>Consistently ranked among top performers for outstanding sales performance and client trust.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">Property Sales</div>
+        <div class="skill">Client Negotiation</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Market Analysis</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">CRM Tools</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm" onsubmit="return false;">
+        <label><span>Name</span><input type="text" placeholder="Your Name" required></label>
+        <label><span>Email</span><input type="email" placeholder="Your Email" required></label>
+        <label><span>Message</span><textarea rows="5" placeholder="Your Message" required></textarea></label>
+        <button id="sendBtn">Send Message</button>
+        <p class="contact-note">To receive messages, enable Netlify Forms or connect your backend.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abdulrahman Zidan — ZidMatrix</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
