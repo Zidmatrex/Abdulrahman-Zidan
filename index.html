@@ -202,6 +202,47 @@
       justify-content: space-between;
       padding: 1.2rem 0;
     }
+
+    .shiny-gold {
+      color: #FFD700;
+      text-shadow: 
+        0 0 5px #FFD700,
+        0 0 10px #FFD700,
+        0 0 15px #FFD700,
+        0 0 20px #FFD700,
+        0 0 30px #FFD700,
+        0 0 40px #FFD700;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 
+          0 0 5px #FFD700,
+          0 0 10px #FFD700,
+          0 0 15px #FFD700;
+      }
+      50% {
+        text-shadow: 
+          0 0 10px #FFD700,
+          0 0 20px #FFD700,
+          0 0 30px #FFD700,
+          0 0 40px #FFD700,
+          0 0 50px #FFD700;
+      }
+    }
+
+    #cursor {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      transition: all 0.1s ease;
+      box-shadow: 0 0 10px currentColor;
+      transform: translate(-50%, -50%);
+    }
   </style>
 </head>
 
@@ -227,7 +268,7 @@
     <div class="container hero-content" data-aos="fade-up">
       <div class="hero-text">
         <h1 class="name">Abdulrahman <span class="accent">Zidan</span></h1>
-        <p class="role">Top Real Estate Achiever — Property Sales & Client Relations</p>
+        <p class="role"><span class="shiny-gold">Top Achiever</span> — Property Sales & Client Relations</p>
         <p>Experienced real estate agent with over <strong>3 years</strong> of success in <strong>Cold Calling</strong>, closing deals, and building long-term trust with clients.</p>
         <div class="hero-buttons">
           <a href="AbdulrahmanZidanResume.pdf" class="btn-gold" target="_blank">Download CV</a>
@@ -314,6 +355,43 @@
   <script>
     AOS.init();
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Custom cursor
+    const cursor = document.createElement('div');
+    cursor.id = 'cursor';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+
+      const el = document.elementFromPoint(e.clientX, e.clientY);
+      if (el) {
+        let computed = window.getComputedStyle(el);
+        let color = computed.backgroundColor;
+
+        // Traverse up if transparent
+        let currentEl = el;
+        while (currentEl && (color === 'rgba(0, 0, 0, 0)' || color === 'transparent')) {
+          currentEl = currentEl.parentElement;
+          if (currentEl) {
+            computed = window.getComputedStyle(currentEl);
+            color = computed.backgroundColor;
+          } else {
+            break;
+          }
+        }
+
+        // Fallback to body if still transparent
+        if (color === 'rgba(0, 0, 0, 0)' || color === 'transparent') {
+          computed = window.getComputedStyle(document.body);
+          color = computed.backgroundColor;
+        }
+
+        cursor.style.backgroundColor = color;
+        cursor.style.color = color;
+      }
+    });
   </script>
 </body>
 </html>
