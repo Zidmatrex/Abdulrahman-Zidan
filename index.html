@@ -5,17 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abdulrahman Zidan — Real Estate Agent | ZidMatrix</title>
 
-  <meta name="description" content="Abdulrahman Zidan (ZidMatrix) — Top Real Estate Achiever. Professional real-estate agent with strong sales, negotiation and client-relationship skills." />
-  <meta name="keywords" content="Real Estate, Real Estate Agent, Property Sales, Abdulrahman Zidan, ZidMatrix, Top Achiever" />
+  <meta name="description" content="Abdulrahman Zidan (ZidMatrix) — Top Real Estate Achiever with 3 years of experience in cold calling, sales, and client relations." />
+  <meta name="keywords" content="Real Estate, Real Estate Agent, Property Sales, Abdulrahman Zidan, ZidMatrix, Top Achiever, Cold Calling" />
   <meta name="author" content="Abdulrahman Zidan" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SXTNHK88D"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-5SXTNHK88D');
-  </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -25,24 +17,31 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      color: #222;
       background-color: #fff;
-      color: #000;
       margin: 0;
-      padding: 0;
     }
 
-    .nav-wrap {
-      background: #000;
-      color: gold;
-      padding: 1rem 0;
+    section {
+      padding: 80px 0;
     }
 
-    .nav .nav-links a {
-      color: gold;
-      font-weight: 600;
-      text-decoration: none;
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
     }
 
+    h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: black;
+      margin-bottom: 2rem;
+    }
+
+    .accent { color: gold; }
+
+    /* hero */
     .hero-content {
       display: flex;
       flex-wrap: wrap;
@@ -58,15 +57,10 @@
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid gold;
-      box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      box-shadow: 0 0 25px rgba(255,215,0,0.3);
     }
 
-    .hero-buttons {
-      margin-top: 1rem;
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
+    .hero-buttons { margin-top: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .btn-gold {
       background-color: gold;
@@ -78,62 +72,135 @@
       transition: 0.3s;
     }
 
-    .btn-gold:hover {
-      background-color: #e6b800;
+    .btn-gold:hover { background-color: #e6b800; }
+
+    /* About */
+    .about-text {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.7;
     }
 
-    .section {
-      padding: 4rem 1rem;
+    /* Experience */
+    .experience-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: auto;
     }
 
-    /* خلفية ذهبية أنيقة لمربعات الأقسام */
-    .section-content {
-      background: linear-gradient(135deg, gold, #b8860b);
-      color: #000;
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    .exp-item {
+      background: gold;
+      color: black;
+      border-left: 4px solid black;
+      padding: 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
     }
 
+    .exp-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .exp-item h3 { margin: 0; font-weight: 700; }
+    .exp-item p { margin: 0.5rem 0 0; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .skill {
+      background: gold;
+      color: black;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+      background: black;
+      color: gold;
+    }
+
+    /* Contact */
     #contactForm {
       display: flex;
       flex-direction: column;
       gap: 1rem;
-      background: linear-gradient(135deg, gold, #b8860b);
+      background: #fdfdfd;
       padding: 2rem;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      color: #000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
 
     #contactForm input, #contactForm textarea {
       width: 100%;
       padding: 10px;
       border-radius: 6px;
-      border: 1px solid #000;
+      border: 1px solid #ccc;
       font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    #contactForm input:focus, #contactForm textarea:focus {
+      border-color: gold;
+      box-shadow: 0 0 6px rgba(255,215,0,0.3);
+      outline: none;
     }
 
     #sendBtn {
-      background: #000;
+      background: black;
       color: gold;
       font-weight: 600;
       padding: 12px;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: 0.3s;
     }
 
-    #sendBtn:hover {
-      background: gold;
-      color: black;
-    }
+    #sendBtn:hover { background: gold; color: black; }
 
     footer {
-      background: #000;
-      color: gold;
       text-align: center;
-      padding: 1.5rem;
+      padding: 2rem;
+      background: #111;
+      color: gold;
+      font-size: 0.9rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: gold; }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 0;
     }
   </style>
 </head>
@@ -155,56 +222,74 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section id="home" class="hero section">
     <div class="container hero-content" data-aos="fade-up">
       <div class="hero-text">
-        <h1>Abdulrahman <span class="accent">Zidan</span></h1>
-        <p>Top Real Estate Achiever — 3 years of experience in Cold Calling and Property Sales</p>
+        <h1 class="name">Abdulrahman <span class="accent">Zidan</span></h1>
+        <p class="role">Top Real Estate Achiever — Property Sales & Client Relations</p>
+        <p>Experienced real estate agent with over <strong>3 years</strong> of success in <strong>Cold Calling</strong>, closing deals, and building long-term trust with clients.</p>
         <div class="hero-buttons">
-          <a href="assets/AbdulrahmanZidanResume.pdf" class="btn-gold" target="_blank">Download CV</a>
+          <a href="AbdulrahmanZidanResume.pdf" class="btn-gold" target="_blank">Download CV</a>
           <a href="https://www.linkedin.com/in/abdulrahmanzidan/" class="btn-gold" target="_blank">LinkedIn</a>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="assets/profile.jpg" alt="Abdulrahman Zidan">
+        <img src="profile.jpg" alt="Abdulrahman Zidan">
       </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>About Me</h2>
+      <p class="about-text">
+        I'm <strong>Abdulrahman Zidan</strong>, a passionate <strong>Real Estate Agent</strong> known for my integrity, persistence, and high closing rate.  
+        Over the past 3 years, I’ve mastered <strong>cold calling</strong>, <strong>negotiation</strong>, and <strong>lead conversion</strong>, achieving top sales results across multiple companies.  
+        I believe in creating value through trust and providing clients with tailored real estate solutions.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
   <section id="experience" class="section" data-aos="fade-up">
-    <div class="container section-content">
+    <div class="container">
       <h2>Experience</h2>
-      <ul>
-        <li>PBS — Real Estate Agent</li>
-        <li>Rabidgen — Real Estate Agent</li>
-        <li>Skyline PBO — Real Estate Agent</li>
-        <li>No Accent — Real Estate Agent</li>
-        <li>Call Deals — Real Estate Agent</li>
-        <li>Peak Point — Real Estate Agent</li>
-        <li>SUP Solution — Real Estate Agent</li>
-        <li>Dail Force — Real Estate Agent</li>
-      </ul>
+      <div class="experience-list">
+        <div class="exp-item"><h3>PBS — Real Estate Agent</h3><p>Focused on cold calling and property matching for premium clients.</p></div>
+        <div class="exp-item"><h3>Rabidgen — Real Estate Agent</h3><p>Handled negotiations and follow-ups with potential investors and buyers.</p></div>
+        <div class="exp-item"><h3>Skyline PBO — Real Estate Agent</h3><p>Delivered high-conversion campaigns for off-plan and resale projects.</p></div>
+        <div class="exp-item"><h3>No Accent — Real Estate Agent</h3><p>Developed customized property presentations and client retention strategies.</p></div>
+        <div class="exp-item"><h3>Call Deals — Real Estate Agent</h3><p>Excelled in cold calling, consistently achieving top performer results.</p></div>
+        <div class="exp-item"><h3>Peak Point — Real Estate Agent</h3><p>Specialized in lead generation, CRM optimization, and deal closing.</p></div>
+        <div class="exp-item"><h3>SUP Solution — Real Estate Agent</h3><p>Built long-term relationships through professional consulting and integrity.</p></div>
+        <div class="exp-item"><h3>Dail Force — Real Estate Agent</h3><p>Maintained top-tier customer satisfaction through excellent communication and service.</p></div>
+      </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills" class="section" data-aos="fade-up">
-    <div class="container section-content">
+    <div class="container">
       <h2>Skills</h2>
-      <ul>
-        <li>Cold Calling & Lead Conversion</li>
-        <li>Negotiation & Deal Closing</li>
-        <li>CRM Systems Management</li>
-        <li>Fluent English Communication</li>
-        <li>Client Relationship Building</li>
-      </ul>
+      <div class="skills-grid">
+        <div class="skill">Cold Calling</div>
+        <div class="skill">Lead Generation</div>
+        <div class="skill">Negotiation</div>
+        <div class="skill">Closing Deals</div>
+        <div class="skill">CRM Tools</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Client Retention</div>
+        <div class="skill">Market Research</div>
+      </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="section" data-aos="fade-up">
-    <div class="container section-content">
+    <div class="container">
       <h2>Contact Me</h2>
-      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:abdulrahmanzidan@gmail.com">abdulrahmanzidan@gmail.com</a></p>
-      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +20 111 234 5678</p>
       <form id="contactForm" onsubmit="return false;">
         <label><span>Name</span><input type="text" placeholder="Your Name" required></label>
         <label><span>Email</span><input type="email" placeholder="Your Email" required></label>
@@ -215,8 +300,10 @@
     </div>
   </section>
 
-  <footer>
-    <p>© <span id="year"></span> Abdulrahman Zidan — ZidMatrix</p>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Abdulrahman Zidan — ZidMatrix</p>
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
